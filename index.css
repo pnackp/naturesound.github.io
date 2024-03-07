@@ -764,795 +764,47 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
 }
-
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-}
-body {
-    background-color: #4379cafb;
-}
-.Logo {
-    font-size: 30px;
-    font-weight: 1000;
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    color: white;
-    text-transform: uppercase;
-    z-index: 100;
-    border-bottom: 2px solid transparent; /* Start with a transparent underline */
-    transition: border-bottom-color 0.3s; /* Smooth transition effect */
-}
-
-/* Define animation for the text decoration underline */
-@keyframes underlineAnimation {
-    0% { width: 0%; } /* Start with no width */
-    100% { width: 100px; } /* End with full width */
-}
-
-.Logo:hover {
-    border-bottom-color: black; /* Change the underline color on hover */
-    animation: underlineAnimation 0.3s forwards; /* Apply animation on hover */
-}
-
-.Donation {
-    color: white;
-    border: 1px solid white;
-    font-size: 20px;
-    font-weight: 1000;
-    position: absolute;
-    top:29px;
-    left:10%;
-    text-decoration: none;
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: 1s;
-    background-color: #4379cafb;
-}
-.Donation::before {
-    content: "Donate";
-}
-
-.Donation:hover::after {
-    content: "Buy me Tekken8"; /* Set the content when hovered */
-}
-
-/* Hide the text "Donate" when hovered */
-.Donation:hover::before {
-    content: "";
-}
-
-/* Adjust the styling when hovered */
-.Donation:hover {
-    background-color: white;
-    color: black;
-    width: 300px;
-    cursor: pointer;
-    border: 1px solid black;
-}
-.box-right {
-    background-color: rgb(224, 221, 221);
-    width: 10%;
-    height: 600px;
-    border-radius: 10px;
-    position: absolute;
-    top:100px;
-    right:30px;
-    border: 2px solid black;
-    
-}
-.Bodybox-type-right button {
-    font-size: 20px;
-    font-weight: 200;
-    background-color: white;
-    border-radius: 10px;
-    width: 90%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 15px;
-}
-.stopbtn button {
-    font-size: 20px;
-    font-weight: 200;
-    background-color: white;
-    border-radius: 10px;
-    width: 90%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 160px;
-}
-
-.Bodybox-type-right button{
-    font-family: "montserrat";
-}
-.box {
-    background-color: white;
-    border-radius: 10px;
-    width: 11%;
-    height: 190px;
-    margin-left: 50px;
-    margin-top: 2px;
-    border: 2px solid black;
-    transition: 0.5s;
-}
-
-.box:hover{
-    background-color: rgb(131, 131, 131);
-    color: rgb(255, 255, 255);
-}
-.box a {
-    position: absolute;
-    width: 100%;  
-}
-
-.box:hover {
-    transform: scale(1.1);
-}
-  
-.box:active{
-    transform: scale(0.9);
- }
-
-.Mainbox-ontop {
-    display: flex;
-    margin-top:85px;
-}
-.Mainbox-Middle {
-    display: flex;
-    margin-top:85px;
-}
-.Mainbox-Footer {
-    display: flex;
-    margin-top:85px;
-}
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-section .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background:url(wave.png);
-    background-size:1000px 100px;
-    -webkit-filter: blur(5px);
-    z-index: -1; /* Add this line */
-}
-section .wave.wave1 {
-    animation: animate1 30s linear infinite;
-    z-index: 1000;
-    opacity: 1;
-    animation-delay:0s ;
-    bottom: 0;
-}
-section .wave.wave2 {
-    animation: animate2 15s linear infinite;
-    z-index: 999;
-    opacity: 0.5;
-    animation-delay:-5s ;
-    bottom: 0;
-}
-section .wave.wave3 {
-    animation: animate3 15s linear infinite;
-    z-index: 998;
-    opacity: 0.7;
-    animation-delay:-3s ;
-    bottom: 0;
-}
-section .wave.wave4 {
-    animation: animate4 5s linear infinite;
-    z-index: 997;
-    opacity: 0.3;
-    animation-delay:-9s ;
-    bottom: 0;
-}
-@keyframes animate1
-{
-    0%{
-        background-position-x:0 ;
-    }
-    100%{
-        background-position-x:-1000px ;
-    }
-}
-@keyframes animate2
-{
-    0%{
-        background-position-x:0 ;
-    }
-    100%{
-        background-position-x:1000px ;
-    }
-}
-@keyframes animate3
-{
-    0%{
-        background-position-x:0 ;
-    }
-    100%{
-        background-position-x:-1000px ;
-    }
-}
-@keyframes animate4
-{
-    0%{
-        background-position-x:0 ;
-    }
-    100%{
-        background-position-x:1000px ;
-    }
-}
-.btn,
-.btn-Stop {
-  background-color: white;
-  border: 1px solid black;
-  outline: 1px solid black; /* You need to specify an actual color for the outline */
-  padding: 1.5rem 2rem;
-  font-size: 4rem;
-  font-family: monospace;
-  box-shadow: 0px 5px 10px rgba(30, 144, 255, 0.4); /* Used rgba() instead of darken() */
-  transition: all 1s;
-  cursor: pointer;
-  border-radius: 5px;
-  border-bottom: 4px solid rgba(192, 192, 192, 0.7); /* Used rgba() instead of lighten() */
-}
-
-.btn:hover,
-.btn-Stop:hover {
-  box-shadow: 0px 15px 25px -5px rgba(30, 144, 255, 0.4); /* Used rgba() instead of darken() */
-  transform: scale(1.2);
-}
-
-.btn:active,
-.btn-Stop:active {
-  box-shadow: 0px 4px 8px rgba(30, 144, 255, 0.3); /* Used rgba() instead of darken() */
-  transform: scale(0.9);
-}
-
-.box{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1201;
-}
-.Mainbox-ontop a,.Mainbox-Middle a,.Mainbox-Footer a{
-    font-size:85px;
-    position:absolute;
-    color: rgb(14, 13, 13);
-}
-.text{
-    font-size: 20px;
-    position: absolute;
-    top: 10px; /* Align to the top */
-    left: 15px; /* Align to the left */
-
-}
-.tip {
-    display: none;
-    background-color: white;
-    width: 500px;
-    height: 50px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-top: 10px;
-    margin-right: 100px;
-    animation-duration: 1s;
-    transition: opacity 0.5s ease;
-    animation: 2s wow;
-}
-
-@keyframes wow {
-    from {
-      right: 0px;
-      width: 0;
-    }
-    to {
-      margin-right: 100px;
-      width:500px;
-    }
-  }
-.box {
-    cursor:pointer;
-}
-.bird {
-    width: 100px;
-}
-.paino {
-    width: 80px;
-}
-.bunny {
-    width: 80px;
-}
-.clound {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 50px;
-    background-color: #4379cafb;
-    border: none;
-    margin-top: 10px;
-    margin-right: 30px;
-    border: none;
-    cursor: pointer;
-    transition: all 1s;
-    cursor: pointer;
-    z-index: 100;
-  }
-  
-.clound:hover {
-    transform: scale(1.1);
-}
-  
-.clound:active{
-    transform: scale(0.9);
- }
-.Tip-bottom-right {
-    margin-top: 10px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Screen-monitor {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 48%;
-    width: 30px;
-    border: none;
-}
-
-.Screen-monitor button{
-    background-color: #4379cafb;
-    text-decoration: none;
-    font-size: 30px;
-    border: none;
-    
-}
-
-.Button-show {
-    background-color: #4379cafb;
-    text-decoration: none;
-    font-size: 30px;
-    width: 50px;
-    height: 30px;
-    color: black;
-    transition: all 1s;
-    cursor: pointer;
-}
-.Button-show:hover {
-    transform: scale(1.2);
-}
-  
-.Button-show:active{
-    transform: scale(0.9);
- }
-.Screen-monitor-box {
-    display: flex;
-    justify-content: center;
-}
-.boxscreen {
-    position: absolute;
-    top:50px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 60%;
-    height: 600px;
-    display: none;
-    animation-duration: 2s;
-    transition: opacity 0.5s ease;
-    animation-name: fadeIn;
-    z-index: 2001;
-}
-@keyframes fadeIn {
-    from {
-      top:-100px;
-    }
-    to {
-      top:50px;
-    }
-  }
-.Volume,.Volume2,.Volume3,.Volume4,.Volume5,.Volume6{
-    display: none;
-    width: 150px;
-    height: 20px;
-    position: absolute;
-    background-color: #fffffffb;
-    top: 300px;
-    cursor: pointer;
-    border-radius:10px;
-    animation: 1s song;
-    z-index: 1;
-}
-@keyframes song {
-    from {
-      top: 200px;
-      width: 100px;
-    }
-    to {
-      top:300px;
-      width: 150px;
-    }
-  }
-
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-  
-  }
-                          /***** Track Styles *****/
-/***** Chrome, Safari, Opera, and Edge Chromium *****/
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #053a5f;
-    height: 0.5rem;
-    border-radius: 30px;
-  }
-  
-  /******** Firefox ********/
-  input[type="range"]::-moz-range-track {
-    background: #053a5f;
-    height: 0.5rem;
-  }
-/***** Thumb Styles *****/
-/***** Chrome, Safari, Opera, and Edge Chromium *****/
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -4px; /* Centers thumb on the track */
-    border-radius: 30px;
-    background-color: #5cd5eb;
-    height: 1rem;
-    width: 1rem;    
- }
-
-.Volume7,.Volume8,.Volume9,.Volume10,.Volume11,.Volume12{
-    display: none;
-    width: 150px;
-    height: 20px;
-    position: absolute;
-    border: none;
-    background-color: #fffffffb;
-    animation: 1s song2;
-    z-index: 1;
-}
-@keyframes song2 {
-    from {
-      top: 480px;
-      width: 100px;
-    }
-    to {
-      top:580px;
-      width: 150px;
-    }
-  }
-.Volume13,.Volume14,.Volume15,.Volume16,.Volume17,.Volume18{
-    display: none;
-    width: 150px;
-    height: 20px;
-    position: absolute;
-    border: none;
-    background-color: white;
-    top: 860px;
-    animation: 1s song3;
-    z-index: 1100;
-}
-@keyframes song3 {
-    from {
-      top: 800px;
-      width: 100px;
-    }
-    to {
-      top: 860px;
-      width: 150px;
-    }
-  }
-/* Volume 1 */
-.Volume {
-    left: 4%;
-}
-.Volume2 {
-    left: 17.5%;
-}
-.Volume3 {
-    top: 300px;
-    left: 31.5%;
-}
-.Volume4 {
-    top: 300px;
-    left: 44.8%;
-}
-.Volume5 {
-    top: 300px;
-    left: 58.5%;
-}
-.Volume6 {
-    top: 300px;
-    left: 71.9%;
-}
-.Volume7{
-    top: 580px;
-    left: 4%;
-}
-.Volume8{
-    top: 580px;
-    left: 17.5%;
-}
-.Volume9{
-    position: absolute;
-    top: 580px;
-    left: 31.5%;
-}
-.Volume10{
-    position: absolute;
-    top: 580px;
-    left: 44.8%;
-}
-.Volume11{
-    
-    top: 580px;
-    left: 58.5%;
-}
-.Volume12{
-    top: 580px;
-    left: 71.9%;
-}
-.Volume13{
-   bottom: 70px;
-    left: 4%;
-}
-.Volume14{
-    bottom: 70px;
-    left: 17.5%;
-}
-.Volume15{
-    position: absolute;
-    bottom: 70px;
-    left: 31.5%;
-}
-.Volume16{
-    position: absolute;
-    bottom: 70px;
-    left: 44.8%;
-}
-.Volume17{
-    position: absolute;
-    bottom: 70px;
-    left: 58.5%;
-}
-.Volume18{
-    bottom: 70px;
-    left: 71.9%;
-}
-
-
-.bx.bx-moon:hover,.bx.bxs-sun:hover{
-    color: yellow;
-}
-.bx.bx-water:hover,.bx.bx-shower:hover,.bx-cloud-rain:hover {
-    color: rgb(160, 228, 255);
-}
-.bx.bxs-tree:hover,.bx.bxs-keyboard:hover,.bx.bx-wind:hover,.bx.bx-walk:hover,.bunny:hover
-{
-    color: white;
-}
-.bx.bxs-hot:hover{
-    color:rgb(255, 193, 77)
-}
-.bx.bx-brush:hover{
-    color: burlywood;
-}
-.bx.bx-buildings:hover {
-    color: #fffffffb;
-}
-.buttonload {
-    display: none;
-    background-color: #f2f7f5;
-    border: none;
-    color: rgb(14, 13, 13);
-    padding: 12px 16px;
-    font-size: 16px;
-    border-radius: 10px;
-    border:1px solid black;
-    position: absolute;
-    right: 0;
-    margin-right: 30px;
-    bottom: 150px;
-    z-index: 2001; /* Ensure it stays on top of other elements */
-}
-.clound {
-    color: black;
-}
-.Screen-monitor {
-    display: none;
-}
-
-.Screen-monitor-box1 {
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(2px) ;
-    z-index: 2000;
-}
-.Screen-monitor{ 
-    z-index: 2001;
-}
-.allReference {
-    color: white;
-    border: 1px solid white;
-    font-size: 20px;
-    font-weight: 1000;
-    position: absolute;
-    top :90%;
-    right:30px;
-    text-decoration: none;
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: 1s;
-    background-color: #4379cafb;
-    z-index: 3000;
-}
-
-/* Adjust the styling when hovered */
-.allReference:hover {
-    background-color: white;
-    color: black;
-    width: 161px;
-    cursor: pointer;
-    border: 1px solid black;
-}
-.boxReference {
-    display: none;
-    background-color: white;
-    border: 1px solid black;
-    position: absolute;
-    width: 20%;
-    height: 500px;
-    z-index: 10000;
-    bottom: 250px;
-    left: 40%;
-    border-radius: 10px;
-    animation: 2s boxanimation;
-    
-}
-
-@keyframes boxanimation {
-    from {
-      bottom: 0px;
-      height: 0;
-    }
-    to {
-      bottom: 250px;
-      height: 500px;
-    }
-  }
-.moon {
-    display: block;
-    position: absolute;
-    bottom: 92%;
-    left: 100px;
-    font-size: 50px;
-    color: rgb(138, 138, 73);
-    z-index: 1;
-    cursor: pointer;
-    background:#4379cafb;
-    border: none;
-    transition: 2s;
-}
-.moon:hover{
-    color: rgb(238, 238, 138);
-}
-
-.cloud-sky a {
-    position: absolute;
-    color: white;
-    font-size: 50px;
-    -webkit-filter: blur(2px);
-    z-index: -1;
-}
-.cloud-background1 {
-    animation: cloud1 30s linear infinite;
-    animation-delay:0s ;
-    top:300px;
-    z-index:1000;
-
-}
-.cloud-background2 {
-    animation: cloud2 15s linear infinite;
-    animation-delay:-5s ;
-    top:570px;
-    right: 0;
-    z-index:1000;
-}
-.cloud-background3 {
-    animation: cloud3 15s linear infinite;
-    animation-delay:-3s ;
-    top:20px;
-    right: 0;
-    z-index:-1000;
-}
-
-@keyframes cloud1
-{
-    0%{
-        right: 101%;
-    }
-    100%{
-        right: -10%;
-    }
-}
-@keyframes cloud2
-{
-    0%{
-        right: 1%;
-    }
-    100%{
-        right: 101%;
-    }
-}
-@keyframes cloud3
-{
-    0%{
-        right: 1%;
-    }
-    100%{
-        right: 80%;
-    }
-
-}
 @media screen and (max-width: 500px) {
+    
 
-    /* Enable scrolling for the entire page */
-    html, body {
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-      height: 1000%; /* Set body height to viewport height for smooth scrolling */
+     /* Enable scrolling for the entire page */
+     html,body {
+        z-index: -1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+        height: 175%; /* Set body height to viewport height for smooth scrolling */
     }
-  
+    .Navbar{
+        height: 0;
+    }
     /* Styling for the logo */
     .Logo {
-      font-size: 30px;
-      color: black;
+        font-size: 30px;
+        font-weight: 1000;
+        position: relative;
+       top: 20px;
+       left: 40px;
+       color: white;
+       text-transform: uppercase;
+       z-index: 100;
+       border-bottom: 2px solid transparent; /* Start with a transparent underline */
+       transition: border-bottom-color 0.3s; /* Smooth transition effect */
     }
-  
+    @keyframes underlineAnimation {
+        0% { width: 0%; } /* Start with no width */
+        100% { width: 100px; } /* End with full width */
+    }
+    
     /* Styles for a container box */
     .box {
       background-color: white;
       border-radius: 10px;
-      width: 90%; /* Adjust width to occupy most of the screen */
-      margin: 15px auto; /* Center the box horizontally with 15px top and bottom margin */
+      width: 60%; /* Adjust width to occupy most of the screen */
+      margin: 20px 30px; /* Center the box horizontally with 15px top and bottom margin */
       border: 2px solid black;
+    }
+    .Bodybox{
+        height: 175%;
     }
   
     /* Donation button styles */
@@ -1562,7 +814,7 @@ input[type="range"]::-webkit-slider-thumb {
       font-size: 20px;
       font-weight: 1000;
       position: absolute;
-      top: 80px;
+      top: 70px;
       text-decoration: none;
       width: 150px;
       height: 40px;
@@ -1593,6 +845,7 @@ input[type="range"]::-webkit-slider-thumb {
       top: 150px;
       right: 10px;
       border: 2px solid black;
+      z-index: 1000;
     }
   
     /* Styles for buttons within a container */
@@ -1640,21 +893,35 @@ input[type="range"]::-webkit-slider-thumb {
     }
   
     /* Additional styles for the middle box */
-    .Mainbox-Middle {
-      font-size: 85px;
-      position: absolute;
-      color: rgb(14, 13, 13);
-      top: 300%; /* Adjust position as needed */
-      margin-left: 35px; /* Adjust margin */
-    }
+    
   
     /* Ensure boxes stack vertically and adjust top positioning */
     .Mainbox-ontop,
     .Mainbox-Middle,
     .Mainbox-Footer {
       position: relative;
-      top: 0; /* Stack boxes from the top */
+      top:30px; /* Stack boxes from the top */
       display: flex;
       flex-direction: column; 
+      z-index: 1;
+    }
+    .Reference {
+        display: none;
+        
+    }
+    .moon {
+        width: 10px;
+        height: 10px;
+        position: absolute  ; /* Make moon absolute for positioning */
+        top: 10px; /* Position to top edge */
+        
+        z-index: 90; /* Ensure moon appears behind logo (adjust if needed) */
+        /* Add your desired styles for the moon here (size, color, etc.) */
+      }
+    .Button-show-Screen{
+        display: none;
+    }
+    .tip a {
+        display: none;
     }
 }
