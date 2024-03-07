@@ -1533,9 +1533,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 @media screen and (max-width: 500px) {
     body {
-        overflow: scroll; /* Enable vertical scrolling for the body */
+        overflow-y: scroll; /* Enable vertical scrolling for the body */
         -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
         width: 100%;
+        height: auto; /* Adjust height to allow content to determine height */
+    }
     }
 
     /* Styling for the logo */
