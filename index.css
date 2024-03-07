@@ -1623,7 +1623,29 @@ input[type="range"]::-webkit-slider-thumb {
         width: 100px;
         right: 0;
     }
-    
-
+    .tip {
+        color: #053a5f;
+        background-color: #053a5f;
+        display: none;
+        width: 0;
+        content: "";
+        animation: wow;
+        border: none;
+    }
+    @keyframes wow {
+        from {
+          right: 0px;
+          width: 0;
+        }
+        to {
+          width:0;
+        }
+      }
+    .Tip-bottom-right {
+        display:none;
+    }
+    .Reference {
+        display: none;
+    }
 }
 
