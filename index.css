@@ -1535,9 +1535,9 @@ input[type="range"]::-webkit-slider-thumb {
 
     /* Enable scrolling for the entire page */
     html, body {
-      overflow-y: scroll;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-      height: 100vh; /* Set body height to viewport height for smooth scrolling */
+      height: 1000%; /* Set body height to viewport height for smooth scrolling */
     }
   
     /* Styling for the logo */
