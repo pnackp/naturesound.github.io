@@ -1545,19 +1545,14 @@ input[type="range"]::-webkit-slider-thumb {
         font-size: 30px;
         color: Black;
     }
-    
-    /* Styles for a container box */
     .box {
         background-color: white;
         border-radius: 10px;
-        width: 55%; /* Adjust width to occupy 90% of the screen width */
-        height: 190px;
-        margin: 30px 35px; /* Set top and bottom margin to 10px and auto left and right margin to center the box */
+        width: 50%; /* Adjust width to occupy 90% of the screen width */
+        margin: 15px 35px; /* Center the box horizontally with 15px top and bottom margin */
         border: 2px solid black;
         overflow-y: auto; /* Enable vertical scrolling for content overflow */
-        top: 30px; /* Positioning */
     }
-    
     /* Donation button styles */
     .Donation {
         color: white;
@@ -1663,6 +1658,12 @@ input[type="range"]::-webkit-slider-thumb {
         color: rgb(14, 13, 13);
         top: 300%; /* Move it to a specific position from the top */
         margin-left: 35px; /* Adjust margin */
+    }
+    .Mainbox-ontop, .Mainbox-Middle, .Mainbox-Footer {
+        position: relative;
+        top: 45px;
+        /* Update flex-direction to display boxes in a column layout */
+        flex-direction: column;
     }
 
 }
