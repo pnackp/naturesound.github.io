@@ -1532,8 +1532,15 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 @media screen and (max-width: 500px) {
+    html 
+     {
+        position: unset !important;
+        top: 0 !important;
+    }
     body {
-        overflow: auto; /* Enable scrolling */
+        overflow: scroll; /* Enable vertical scrolling for the body */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+        width: 100%;
     }
 
     /* Styling for the logo */
@@ -1546,8 +1553,8 @@ input[type="range"]::-webkit-slider-thumb {
     .box {
         background-color: white;
         border-radius: 10px;
-        width: %; /* Adjust width to occupy 90% of the screen width */
-        margin: 15px auto; /* Center the box horizontally with 15px top and bottom margin */
+        width: 50%; /* Adjust width to occupy 90% of the screen width */
+        margin: 15px 20px; /* Center the box horizontally with 15px top and bottom margin */
         border: 2px solid black;
         overflow-y: auto; /* Enable vertical scrolling for content overflow */
     }
