@@ -1531,26 +1531,29 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
 }
-
 @media screen and (max-width: 500px) {
     body {
         overflow: scroll; /* Enable vertical scrolling for the body */
         -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-         width: 100%;    
+        width: 100%;
     }
+
     /* Styling for the logo */
     .Logo {
         font-size: 30px;
-        color: Black;
+        color: black;
     }
+
+    /* Styles for a container box */
     .box {
         background-color: white;
         border-radius: 10px;
-        width: 50%; /* Adjust width to occupy 90% of the screen width */
-        margin: 15px 35px; /* Center the box horizontally with 15px top and bottom margin */
+        width: 60%; /* Adjust width to occupy 90% of the screen width */
+        margin: 15px auto; /* Center the box horizontally with 15px top and bottom margin */
         border: 2px solid black;
         overflow-y: auto; /* Enable vertical scrolling for content overflow */
     }
+
     /* Donation button styles */
     .Donation {
         color: white;
@@ -1578,7 +1581,7 @@ input[type="range"]::-webkit-slider-thumb {
         cursor: pointer;
         border: 1px solid black;
     }
-    
+
     /* Styles for a right-aligned box */
     .box-right {
         background-color: rgb(224, 221, 221);
@@ -1590,9 +1593,10 @@ input[type="range"]::-webkit-slider-thumb {
         right: 10px;
         border: 2px solid black;
     }
-    
+
     /* Styles for buttons within a container */
-    .Bodybox-type-right button {
+    .Bodybox-type-right button,
+    .stopbtn button {
         font-size: 15px;
         font-weight: 1000;
         background-color: white;
@@ -1605,22 +1609,7 @@ input[type="range"]::-webkit-slider-thumb {
         margin-left: 5px;
         margin-top: 15px;
     }
-    
-    /* Additional styles for stop button */
-    .stopbtn button {
-        font-size: 20px;
-        font-weight: 1000;
-        background-color: white;
-        border-radius: 10px;
-        width: 90%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5px;
-        margin-top: 100px;
-    }
-    
+
     /* Animation for tip */
     .tip {
         color: #053a5f;
@@ -1631,7 +1620,7 @@ input[type="range"]::-webkit-slider-thumb {
         animation: wow;
         border: none;
     }
-    
+
     /* Keyframe animation */
     @keyframes wow {
         from {
@@ -1642,13 +1631,13 @@ input[type="range"]::-webkit-slider-thumb {
             width: 0;
         }
     }
-    
+
     /* Styles for a section element with class wave */
     section .wave {
         position: relative;
         z-index: -1; /* Move it behind other content */
     }
-    
+
     /* Additional styles for the middle box */
     .Mainbox-Middle {
         font-size: 85px;
@@ -1657,12 +1646,18 @@ input[type="range"]::-webkit-slider-thumb {
         top: 300%; /* Move it to a specific position from the top */
         margin-left: 35px; /* Adjust margin */
     }
-    .Mainbox-ontop, .Mainbox-Middle, .Mainbox-Footer {
+
+    /* Ensure boxes stack vertically */
+    .Mainbox-ontop,
+    .Mainbox-Middle,
+    .Mainbox-Footer {
         position: relative;
         top: 45px;
-        /* Update flex-direction to display boxes in a column layout */
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Update flex-direction to display boxes in a column layout */
     }
+
+    /* Styles for cloud sky links */
     .cloud-sky a {
         position: relative;
         color: white;
