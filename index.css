@@ -1532,142 +1532,129 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 @media screen and (max-width: 500px) {
-    html 
-     {
-        position: unset !important;
-        top: 0 !important;
-    }
-    body {
-        overflow: scroll; /* Enable vertical scrolling for the body */
-        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-        width: 100%;
-    }
 
+    /* Enable scrolling for the entire page */
+    html, body {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+      height: 100vh; /* Set body height to viewport height for smooth scrolling */
+    }
+  
     /* Styling for the logo */
     .Logo {
-        font-size: 30px;
-        color: black;
+      font-size: 30px;
+      color: black;
     }
-
+  
     /* Styles for a container box */
     .box {
-        background-color: white;
-        border-radius: 10px;
-        width: 50%; /* Adjust width to occupy 90% of the screen width */
-        margin: 15px 20px; /* Center the box horizontally with 15px top and bottom margin */
-        border: 2px solid black;
-        overflow-y: auto; /* Enable vertical scrolling for content overflow */
+      background-color: white;
+      border-radius: 10px;
+      width: 90%; /* Adjust width to occupy most of the screen */
+      margin: 15px auto; /* Center the box horizontally with 15px top and bottom margin */
+      border: 2px solid black;
     }
-
+  
     /* Donation button styles */
     .Donation {
-        color: white;
-        border: 1px solid white;
-        font-size: 20px;
-        font-weight: 1000;
-        position: absolute;
-        top: 80px;
-        text-decoration: none;
-        width: 150px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        transition: 1s;
-        background-color: #4379cafb;
+      color: white;
+      border: 1px solid white;
+      font-size: 20px;
+      font-weight: 1000;
+      position: absolute;
+      top: 80px;
+      text-decoration: none;
+      width: 150px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      transition: 1s;
+      background-color: #4379cafb;
     }
-
+  
     /* Hover effect for Donation button */
     .Donation:hover {
-        background-color: white;
-        color: black;
-        width: 200px;
-        cursor: pointer;
-        border: 1px solid black;
+      background-color: white;
+      color: black;
+      width: 200px;
+      cursor: pointer;
+      border: 1px solid black;
     }
-
+  
     /* Styles for a right-aligned box */
     .box-right {
-        background-color: rgb(224, 221, 221);
-        width: 100px;
-        height: 500px;
-        border-radius: 10px;
-        position: absolute;
-        top: 150px;
-        right: 10px;
-        border: 2px solid black;
+      background-color: rgb(224, 221, 221);
+      width: 100px;
+      height: 500px;
+      border-radius: 10px;
+      position: absolute;
+      top: 150px;
+      right: 10px;
+      border: 2px solid black;
     }
-
+  
     /* Styles for buttons within a container */
     .Bodybox-type-right button,
     .stopbtn button {
-        font-size: 15px;
-        font-weight: 1000;
-        background-color: white;
-        border-radius: 10px;
-        width: 90%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 5px;
-        margin-top: 15px;
+      font-size: 15px;
+      font-weight: 1000;
+      background-color: white;
+      border-radius: 10px;
+      width: 90%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5px;
+      margin-top: 15px;
     }
-
+  
     /* Animation for tip */
     .tip {
-        color: #053a5f;
-        background-color: #053a5f;
-        display: none;
-        width: 0;
-        content: "";
-        animation: wow;
-        border: none;
+      color: #053a5f;
+      background-color: #053a5f;
+      display: none;
+      width: 0;
+      content: "";
+      animation: wow;
+      border: none;
     }
-
+  
     /* Keyframe animation */
     @keyframes wow {
-        from {
-            right: 0px;
-            width: 0;
-        }
-        to {
-            width: 0;
-        }
+      from {
+        right: 0px;
+        width: 0;
+      }
+      to {
+        width: 0;
+      }
     }
-
+  
     /* Styles for a section element with class wave */
     section .wave {
-        position: relative;
-        z-index: -1; /* Move it behind other content */
+      position: relative;
+      z-index: -1; /* Move it behind other content */
     }
-
+  
     /* Additional styles for the middle box */
     .Mainbox-Middle {
-        font-size: 85px;
-        position: absolute;
-        color: rgb(14, 13, 13);
-        top: 300%; /* Move it to a specific position from the top */
-        margin-left: 35px; /* Adjust margin */
+      font-size: 85px;
+      position: absolute;
+      color: rgb(14, 13, 13);
+      top: 300%; /* Adjust position as needed */
+      margin-left: 35px; /* Adjust margin */
     }
-
-    /* Ensure boxes stack vertically */
+  
+    /* Ensure boxes stack vertically and adjust top positioning */
     .Mainbox-ontop,
     .Mainbox-Middle,
     .Mainbox-Footer {
-        position: relative;
-        top: 45px;
-        display: flex;
-        flex-direction: column; /* Update flex-direction to display boxes in a column layout */
-    }
-
-    /* Styles for cloud sky links */
-    .cloud-sky a {
-        position: relative;
-        color: white;
-        font-size: 50px;
-        -webkit-filter: blur(2px);
-        z-index: -1;
+      position: relative;
+      top: 0; /* Stack boxes from the top */
+      display: flex;
+      flex-direction: column; 
     }
 }
