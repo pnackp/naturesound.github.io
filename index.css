@@ -1545,15 +1545,17 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .Mainbox-ontop {
         flex-direction: column;
-        overflow-y: auto; /* Allow vertical scrolling */ /* Display boxes in a column layout */
+        overflow-y:100%; /* Allow vertical scrolling */ /* Display boxes in a column layout */
     }
     .Mainbox-Middle {
         flex-direction: column; 
-        overflow-y: auto; /* Allow vertical scrolling *//* Display boxes in a column layout */
+        overflow-y: auto;
+        overflow-y:100%;  /* Allow vertical scrolling *//* Display boxes in a column layout */
     }
     .Mainbox-Footer {
         flex-direction: column;
-        overflow-y: auto; /* Allow vertical scrolling */ /* Display boxes in a column layout */
+        overflow-y: auto; 
+        overflow-y:100%; /* Allow vertical scrolling */ /* Display boxes in a column layout */
     }
     .box {
         background-color: white;
@@ -1564,6 +1566,7 @@ input[type="range"]::-webkit-slider-thumb {
         border: 2px solid black;
         overflow-y: auto;
         top: 30px;
+        overflow-y:100%; 
     }
     .Donation {
         color: white;
