@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="">
+    <nav class="Navbar">
+        <div class="Logo">Nack</div>
+    </nav>
+    <section class="Bodybox">
+      <div class="donateme">
+        <button class="Donation" id="Donation"></button>
+      </div>
+      <div class="Reference">
+        <div class="Screen-monitor-box1" id="Screen-monitor-box1"></div>
+        <button class="allReference" id="allReference">Reference</button>
+        <div class="boxReference" id="boxReference"></div>
+      </div>
+        <div class="Mainbox-ontop">
+          <button id="Box1" class="box">
+            <a1 class="text">Wind</a1>
+            <a class="icon"><i class='bx bx-wind'></i></a>
+        </button>
+        <div class="boxvolume">
+        <input type="range" min="0" max="1" step="0.01" value="0.5" id="Volume" class="Volume">
+      </div>
+        <button id="Box2" class="box">
+            <a1 class="text">Rain</a1>
+            <a class="icon"><i class='bx bx-cloud-rain'></i></a>
+        </button>
+        <input class="Volume2" id="Volume2" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song2', this.value)">
+          <button id="Box3" class="box"><a1 class="text">Keyboard</a1> <a class="icon"><i class='bx bxs-keyboard' ></i></a> </button>
+        <input class="Volume3" id="Volume3" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song3', this.value)">
+          <button id="Box4" class="box"><a1 class="text">Shower</a1> <a class="icon"><i class='bx bx-shower'></i></a> </button>
+        <input class="Volume4" id="Volume4" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song4', this.value)">
+          <button id="Box5" class="box"><a1 class="text">Sea</a1> <a class="icon"><i class='bx bx-water' ></i></a> </button>
+        <input class="Volume5" id="Volume5" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song5', this.value)">
+          <button id="Box6" class="box"><a1 class="text">Forest</a1> <a class="icon"><i class='bx bxs-tree' ></i></a> </button>
+        <input class="Volume6" id="Volume6" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song6', this.value)">  
+        </div>
+        <div class="Middle">
+          <audio id="song1" src="path_to_your_audio_file.mp3"></audio>
+          <div class="Mainbox-Middle">
+              <button id="Box7" class="box"><a1 class="text">City</a1> <a class="icon"><i class='bx bx-buildings' ></i></a></button>
+              <input class="Volume7" id="Volume7" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song7', this.value)">  
+              <button id="Box8" class="box"><a1 class="text">Breath </a1> <a class="icon"><img class="bunny" src="breath.png"></a></button>
+              <input class="Volume8" id="Volume8" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song8', this.value)">  
+              <button id="Box9" class="box"><a1 class="text">Step</a1> <a class="icon"><i class='bx bx-walk' ></i></a></button>
+              <input class="Volume9" id="Volume9" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song9', this.value)">  
+              <button id="Box10" class="box"><a1 class="text">Fire</a1> <a class="icon"><i class='bx bxs-hot'></i></a></button>
+              <input class="Volume10" id="Volume10" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song10', this.value)">  
+              <button id="Box11" class="box"><a1 class="text">Paino</a1> <a class="icon"><img class="paino" src="grand-piano.png"></a></button>
+              <input class="Volume11" id="Volume11" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song11', this.value)">  
+              <button id="Box12" class="box"><a1 class="text">Clock</a1> <a class="icon"><i class='bx bxs-watch' ></i></a></button>
+              <input class="Volume12" id="Volume12" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song12', this.value)">  
+            </div>
+        </div>
+        <div class="Footer">
+          <div class="Mainbox-Footer">
+            <input class="Volume13" id="Volume13" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song13', this.value)">  
+              <button id="Box13" class="box"><a1 class="text">Day</a1> <a class="icon"><i class='bx bxs-sun' ></i></a></button>
+              <input class="Volume14" id="Volume14" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song14', this.value)">  
+              <button id="Box14" class="box"><a1 class="text">Birds</a1> <a class="icon"><img class="bird" src="birds.png"></a></button>
+              <input class="Volume15" id="Volume15" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song15', this.value)">  
+              <button id="Box15" class="box"><a1 class="text">Night</a1> <a class="icon"><i  class='bx bx-moon'></i></a></button>
+              <input class="Volume16" id="Volume16" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song16', this.value)">  
+              <button id="Box16" class="box"><a1 class="text">Talk</a1> <a class="icon"><i class='bx bx-user-voice' ></i></a></button>
+              <input class="Volume17" id="Volume17" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song17', this.value)"> 
+              <button id="Box17" class="box"><a1 class="text">Reading</a1> <a class="icon"><i class='bx bx-book-reader' ></i></a></button>
+              <button id="Box18" class="box"><a1 class="text">Brush</a1> <a class="icon"><i class='bx bx-brush' ></i></a></button>
+              <input class="Volume18" id="Volume18" type="range" min="0" max="1" step="0.1" value="1" onchange="setVolume('song18', this.value)">  
+            </div>
+        </div>
+        <div class="Bodybox-type-right">
+          <div class="box-right">
+              <button class="btn" id="Random-btn">Random</button>
+              <button class="btn" id="Relax-btn">Relax</button>
+              <button class="btn" id="Focus-btn">Focus</button>
+              <button class="btn" id="Sleep-btn">Sleep</button>
+              <button class="btn" id="Sleep-mommy-btn">Sleep with Mommy</button>
+              <div class="stopbtn">
+              <button class="btn-Stop" id="Stop-btn">Stop</button>
+              </div>
+          </div>
+        </div>
+        <div class="animation-background">
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave4"></div>
+          <div class="cloud-sky">
+            <a class="cloud-background1"><i class='bx bxs-cloud'></i></a>
+            <a class="cloud-background2"><i class='bx bxs-cloud'></i></a>
+            <a class="cloud-background3"><i class='bx bxs-cloud'></i></a>
+          </div>
+        </div>
+
+        <div class="Footer-tip">
+            <div class="tip" id="tipbox">
+                <a class="Tip-bottom-right" id="Tip-bottom-right"></a>
+            </div>
+            <a href="https://www.buymeacoffee.com/nack" class="clound" id="clound"><i class='bx bx-cloud'></i></a>
+        </div>
+        <div class="boxbox">
+        <div class="Screen-monitor" id="Screen-monitor">
+          <button class="Button-show-Screen" id="Button-show-Screen"><img class="Button-show" src="211687_down_arrow_icon.png"></button>
+        </div>
+        </div>
+
+        <div class="Screen-monitor-box1" id="Screen-monitor-box1"></div>
+        <div class="Screen-monitor-box">
+           <div class="boxscreen" id="boxscreen">
+            <iframe id="youtubeVideo" width="1152" height="600" src="" frameborder="0"></iframe>
+           </div>
+        </div>
+        <div class="loading">
+        <div class="buttonload" id="buttonload">
+          <i class="fa fa-circle-o-notch fa-spin"></i> Loading Video
+        </div>
+        </div>
+        <button class="moon" id="moon"><i class='bx bxs-moon'></i></button>
+
+      </section>
+      <footer>
+        <div class="boxfooterend">
+          <div class="boxReference"> 
+          </div>
+         </div>
+      </footer>
+    <script src="java.js"></script>
+</body>
+</html>
