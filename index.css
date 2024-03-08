@@ -765,7 +765,9 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 @media screen and (max-width: 500px) {
-    
+    .cloud-sky a {
+        position: fixed;
+    }
 
      /* Enable scrolling for the entire page */
      html,body {
@@ -1115,7 +1117,7 @@ input[type="range"]::-webkit-slider-thumb {
      width: 200px;
      height: 500px;
      border-radius: 10px;
-     position: absolute;
+     position: fixed;
      top: 150px;
      right: 10px;
      border: 2px solid black;
@@ -1316,6 +1318,9 @@ input[type="range"]::-webkit-slider-thumb {
        top: 1180px;
        left: 40px;
    }
+   .cloud-sky a {
+    position: fixed;
+}
 }
 @media screen and (min-width: 1100px) and (max-width: 1500px){
     .Donation{
