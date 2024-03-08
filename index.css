@@ -803,7 +803,7 @@ input[type="range"]::-webkit-slider-thumb {
       background-color: white;
       border-radius: 10px;
       width: 60%; /* Adjust width to occupy most of the screen */
-      margin: 20px 30px; /* Center the box horizontally with 15px top and bottom margin */
+      margin: 20px 10px; /* Center the box horizontally with 15px top and bottom margin */
       border: 2px solid black;
     }
     .Bodybox{
@@ -953,12 +953,12 @@ input[type="range"]::-webkit-slider-thumb {
         cursor: pointer;
         border-radius: 10px;
         z-index: 1;
-        margin: 200px 20px;
+        margin: 200px 30px;
         z-index: 3000;
         animation: 1s song;
     }
     .Bodybox input{
-        left: 45px;
+        left: 10px;
     }
 
     /* Keyframe animation */
@@ -1039,7 +1039,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px){
-    
+    .Button-show-Screen{
+        display: none;
+    }
 
     /* Enable scrolling for the entire page */
     html,body {
