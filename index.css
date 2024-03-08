@@ -772,7 +772,7 @@ input[type="range"]::-webkit-slider-thumb {
         z-index: -1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-        height: 175%; /* Set body height to viewport height for smooth scrolling */
+        height: 178%; /* Set body height to viewport height for smooth scrolling */
     }
     .Navbar{
         height: 0;
@@ -782,13 +782,14 @@ input[type="range"]::-webkit-slider-thumb {
         font-size: 30px;
         font-weight: 1000;
         position: relative;
-       top: 20px;
-       left: 40px;
-       color: white;
-       text-transform: uppercase;
-       z-index: 100;
-       border-bottom: 2px solid transparent; /* Start with a transparent underline */
-       transition: border-bottom-color 0.3s; /* Smooth transition effect */
+        top: 20px;
+        left: 40px;
+        color: white;
+        text-transform: uppercase;
+        z-index: 100;
+        border-bottom: 2px solid transparent; /* Start with a transparent underline */
+        transition: border-bottom-color 0.3s; /* Smooth transition effect */
+        width: 100px;
     }
     @keyframes underlineAnimation {
         0% { width: 0%; } /* Start with no width */
@@ -845,7 +846,7 @@ input[type="range"]::-webkit-slider-thumb {
       top: 150px;
       right: 10px;
       border: 2px solid black;
-      z-index: 1000;
+      z-index: 2000;
     }
   
     /* Styles for buttons within a container */
@@ -900,10 +901,11 @@ input[type="range"]::-webkit-slider-thumb {
     .Mainbox-Middle,
     .Mainbox-Footer {
       position: relative;
-      top:30px; /* Stack boxes from the top */
+      top:100px; /* Stack boxes from the top */
       display: flex;
       flex-direction: column; 
-      z-index: 1;
+      z-index: 2000;
+      margin: 40px 10px;
     }
     .Reference {
         display: none;
@@ -924,4 +926,113 @@ input[type="range"]::-webkit-slider-thumb {
     .tip a {
         display: none;
     }
+    .Volume,
+    .Volume2,
+    .Volume3,
+    .Volume4,
+    .Volume5,
+    .Volume6,
+    .Volume7,
+    .Volume8,
+    .Volume9,
+    .Volume10,
+    .Volume11,
+    .Volume12,
+    .Volume13,
+    .Volume14,
+    .Volume15,
+    .Volume16,
+    .Volume17,
+    .Volume18 {
+        position: absolute;
+        width: 150px;
+        height: 20px;
+        background-color: #fffffffb;
+        cursor: pointer;
+        border-radius: 10px;
+        z-index: 1;
+        margin: 200px 20px;
+        z-index: 3000;
+        animation: 1s song;
+    }
+    .Bodybox input{
+        left: 45px;
+    }
+
+    /* Keyframe animation */
+    @keyframes song {
+        from {
+           
+            width: 100px;
+        }
+        to {
+           
+            width: 150px;
+        }
+    }
+    .Volume {
+        top: 20px;
+    }
+    .Volume2{
+        top: 250px;
+    }
+    .Volume3{
+        top: 480px;
+    }
+    .Volume4{
+        top: 710px;
+    }
+    .Volume5{
+        top: 940px;
+    }
+    .Volume6{
+        position: absolute;
+        top: 1180px;
+        left: 40px;
+    }
+    .Volume7 {
+        top: 20px;
+    }
+    .Volume8{
+        top: 250px;
+    }
+    .Volume9{
+        top: 480px;
+    }
+    .Volume10{
+        top: 710px;
+    }
+    .Volume11{
+        top: 940px;
+    }
+    .Volume12{
+        position: absolute;
+        top: 1180px;
+        left: 40px;
+    }
+    .Volume13 {
+        top: 20px;
+    }
+    .Volume14{
+        top: 250px;
+    }
+    .Volume15{
+        top: 480px;
+    }
+    .Volume16{
+        top: 710px;
+    }
+    .Volume17{
+        top: 940px;
+    }
+    .Volume18{
+        position: absolute;
+        top: 1180px;
+        left: 40px;
+    }
+    
+    
+    
+    
 }
+
